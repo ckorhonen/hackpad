@@ -1,0 +1,5 @@
+# Hackpad Instructions
+
+The Etherpad server is under `etherpad/`, AppJet infrastructure under `infrastructure/`, and native clients under `client/`. The concrete visual comparison workflow is `contrib/testing`: read its `README.txt`, configure `global.cfg`, then use the legacy Python 2 environment required by `ConfigParser` and `file`. From `contrib/testing/`, run `./run.py <testfile.cfg> <section>` for a selected fixture section and test-site URL, followed by `./compare.py` to compare output. An unqualified run selects all configurations. `run.py` clears `screenshots/results/`, and `compare.py` clears `screenshots/diffs/`; preserve needed evidence first or use a disposable copy. `global.cfg` must identify the Selenium command executor; keep optional cookies out of logs and fixtures. It requires Selenium, ImageMagick, PIL, and Wand.
+
+The root README is license inventory, not setup documentation. Preserve vendor boundaries and run only the closest component workflow. Completion is a focused component result with prerequisites recorded; pad content, TestFlight, and service deployment remain separate evidence.
